@@ -4,6 +4,26 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello World! This is the Fractions Project.");
+        // Test constructor 1 --> 1/1
+        Fraction f1 = new Fraction();
+        Console.WriteLine(f1.GetFractionString());
+        Console.WriteLine(f1.GetDecimalValue());
+
+        // Test constructor 2 --> 5/1
+        Fraction f2 = new Fraction(5);
+        Console.WriteLine(f2.GetFractionString());
+        Console.WriteLine(f2.GetDecimalValue());
+
+        // Test constructor 3 --> 3/4
+        Fraction f3 = new Fraction(3, 4);
+        Console.WriteLine(f3.GetFractionString());
+        Console.WriteLine(f3.GetDecimalValue());
+
+        // Change values using setters
+        f3.SetTop(1);
+        f3.SetBottom(3);
+
+        Console.WriteLine(f3.GetFractionString());  // Should be 1/3
+        Console.WriteLine(f3.GetDecimalValue());    // Should be 0.333333...
     }
 }
